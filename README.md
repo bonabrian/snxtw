@@ -1,6 +1,6 @@
 # Next.js (App Router) + Tailwind CSS + Typescript Starter Template
 
-<img src="https://res.cloudinary.com/bonabrian/image/upload/v1684137629/next-starter-tailwind_n0irlh.png" style="height: 330px; width: 100%; object-fit: cover;" />
+<img src="https://github.com/bonabrian/nextjs-starter-tailwind/assets/14372275/a6a61d64-0046-490d-8e0d-920346b5b6ea" />
 
 <div align="center">
   <a href="https://vercel.com/new/clone?repository-url=https://github.com/bonabrian/nextjs-starter-tailwind" target="_blank"><img src="https://vercel.com/button" alt="Deploy with Vercel" /></a> <a href="https://app.netlify.com/start/deploy?repository=https://github.com/bonabrian/nextjs-starter-tailwind" target="_blank"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" /></a> <a href="https://railway.app?referralCode=vMv3VV" target="_blank"><img src="https://railway.app/button.svg" alt="Deploy on Railway" height="32px" /></a>
@@ -31,8 +31,8 @@ This repository is 🔋 ⚡ battery packed with:
 ### 1. Clone this template using one of these ways:
 1. You can simply click `Use this template` button on this repository 
    Please be aware that there will be an attribution on your repository. It would be greatly appreciated if you could leave this attribution intact, as it will help others discover and benefit from this template as well. Thank you! 😄"
-
-   ![Use as template](https://res.cloudinary.com/bonabrian/image/upload/v1684141412/Screen_Shot_2023-05-15_at_16.01.02_w6uvne.png)
+   
+   ![Use as template](https://github.com/bonabrian/nextjs-starter-tailwind/assets/14372275/a7ab09e3-8826-4d48-897e-ccad1b3e6e1d)
 
 2. Using `create-next-app`
    ```bash
