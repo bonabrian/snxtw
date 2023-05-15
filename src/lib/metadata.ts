@@ -93,10 +93,10 @@ export const getMetadata = ({
   )}&description=${encodeURIComponent(description)}`
 
   const updatedOpenGraph: OpenGraph = {
-    siteName: openGraph?.siteName || defaultMetadata.applicationName,
-    title: openGraph?.title || updatedTitle,
-    description: openGraph?.description || description,
-    url: openGraph?.url || `${metadataBase.origin}${metadataBase.pathname}`,
+    siteName: openGraph?.siteName ?? defaultMetadata.applicationName,
+    title: openGraph?.title ?? updatedTitle,
+    description: openGraph?.description ?? description,
+    url: openGraph?.url ?? `${metadataBase.origin}${metadataBase.pathname}`,
     images,
   }
 
