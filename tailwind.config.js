@@ -1,16 +1,29 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  mode: 'jit',
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  darkMode: 'class',
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        // uses `next/font` see `app/layout.tsx`
+        sans: ['var(--font-sans)', ...defaultTheme.fontFamily.sans],
+      },
+      colors: {
+        // change your color schema here
+        primary: {
+          100: '#F2E9FF',
+          200: '#E3D3FF',
+          300: '#D4BDFF',
+          400: '#C6ACFF',
+          500: '#B191FF',
+          600: '#8769DB',
+          700: '#6249B7',
+          800: '#422E93',
+          900: '#2C1B7A',
+        },
       },
     },
   },

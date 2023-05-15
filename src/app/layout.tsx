@@ -1,8 +1,12 @@
 import './globals.css'
 
-import { Inter } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const fontSans = Poppins({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  weight: ['400', '500', '600', '700'],
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,8 +19,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning className={fontSans.variable}>
+      <body className="antialiased text-black bg-slate-100 dark:bg-gray-900 dark:text-slate-100">
+        {children}
+      </body>
     </html>
   )
 }
