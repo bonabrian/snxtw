@@ -1,34 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js (App Router) + Tailwind CSS + Typescript Starter Template
+
+<img src="https://res.cloudinary.com/bonabrian/image/upload/v1684137629/next-starter-tailwind_n0irlh.png" style="height: 330px; width: 100%; object-fit: cover;" />
+
+<div align="center">
+  <a href="https://vercel.com/new/clone?repository-url=https://github.com/bonabrian/nextjs-starter-tailwind" target="_blank"><img src="https://vercel.com/button" alt="Deploy with Vercel" /></a> <a href="https://app.netlify.com/start/deploy?repository=https://github.com/bonabrian/nextjs-starter-tailwind" target="_blank"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" /></a> <a href="https://railway.app?referralCode=vMv3VV" target="_blank"><img src="https://railway.app/button.svg" alt="Deploy on Railway" height="32px" /></a>
+
+  <p>A <a href="https://nextjs.org/docs/app" target="_blank">Next.js</a> (App Router) starter kit template with <a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a> and <a href="https://www.typescriptlang.org/" target="_blank">Typescript</a></p>
+</div>
+
+[![CodeFactor](https://www.codefactor.io/repository/github/bonabrian/nextjs-starter-tailwind/badge)](https://www.codefactor.io/repository/github/bonabrian/nextjs-starter-tailwind)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=bonabrian_nextjs-starter-tailwind&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=bonabrian_nextjs-starter-tailwind) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=bonabrian_nextjs-starter-tailwind&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=bonabrian_nextjs-starter-tailwind) [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=bonabrian_nextjs-starter-tailwind&metric=bugs)](https://sonarcloud.io/summary/new_code?id=bonabrian_nextjs-starter-tailwind) [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=bonabrian_nextjs-starter-tailwind&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=bonabrian_nextjs-starter-tailwind) [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=bonabrian_nextjs-starter-tailwind&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=bonabrian_nextjs-starter-tailwind)
+
+## Features
+
+This repository is 🔋 ⚡ battery packed with:
+
+- 🔥 [Next.js](https://nextjs.org/docs/app) with app router directory structure
+- ⚛️ [React](https://react.dev/)
+- ⚡️ [Typescript](https://www.typescriptlang.org/)
+- 💅 [Tailwind CSS](https://tailwindcss.com/)
+- 💎 Pre-built Components
+- ⚙️ SEO metadata
+- 📏 [ESLint](https://eslint.org/) — Find and fix problems in your code
+- 💖 [Prettier](https://prettier.io/) — Format your code consistently
+- 🐶 [Husky](https://typicode.github.io/husky/#/) & [Lint Staged](https://github.com/okonet/lint-staged) — Run scripts on your staged files before they are committed
+- 🤖 [Conventional Commit Lint](https://github.com/conventional-changelog/conventional-changelog)
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone this template using one of these ways:
+1. You can simply click `Use this template` button on this repository 
+   Please be aware that there will be an attribution on your repository. It would be greatly appreciated if you could leave this attribution intact, as it will help others discover and benefit from this template as well. Thank you! 😄"
+
+   ![Use as template](https://res.cloudinary.com/bonabrian/image/upload/v1684141412/Screen_Shot_2023-05-15_at_16.01.02_w6uvne.png)
+
+2. Using `create-next-app`
+   ```bash
+   npx create-next-app -e https://github.com/bonabrian/nextjs-starter-tailwind project-name
+   ```
+
+3. Using `degit`
+   ```bash
+   npx degit bonabrian/nextjs-starter-tailwind YOUR_APP_NAME
+   ```
+
+### 2. After cloning this project, install dependencies
+It is encouraged to use **yarn** so the husky hooks can work properly.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. Run development server
+You can start the server using this command:
+```bash
+yarn dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. You can start editing the page by modifying `src/app/page.tsx`.
