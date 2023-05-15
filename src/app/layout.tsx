@@ -2,6 +2,7 @@ import './globals.css'
 
 import { Poppins } from 'next/font/google'
 
+import Analytics from '@/components/analytics'
 import Providers from '@/components/providers'
 const fontSans = Poppins({
   subsets: ['latin'],
@@ -29,6 +30,7 @@ export default function RootLayout({
           >
             <div className="min-h-screen">{children}</div>
           </main>
+          <Analytics />
         </Providers>
       </body>
     </html>
