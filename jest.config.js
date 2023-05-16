@@ -20,6 +20,12 @@ const jestConfig = {
     '!./src/**/*.stories.{js,jsx,ts,tsx}',
     '!**/*.d.ts',
     '!**/node_modules/**',
+    '!./src/**/index*.{js,jsx,ts,tsx}',
+    // TODO:
+    // For now unable to test page components using metadata API with Jest
+    // https://github.com/vercel/next.js/issues/47299
+    '!./src/**/layout*.{js,jsx,ts,tsx}',
+    '!./src/**/page*.{js,jsx,ts,tsx}',
   ],
   coverageThreshold: {
     global: {
