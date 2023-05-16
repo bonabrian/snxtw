@@ -2,10 +2,12 @@ import './globals.css'
 
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
+import Link from 'next/link'
 
 import Analytics from '@/components/analytics'
 import Providers from '@/components/providers'
-import { getMetadata } from '@/lib/metadata'
+import ThemeSwitch from '@/components/theme-switch'
+import { defaultMetadata, getMetadata } from '@/lib/metadata'
 
 const fontSans = Poppins({
   subsets: ['latin'],
@@ -20,16 +22,31 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const date = new Date()
+  const year = date.getFullYear()
+
   return (
     <html lang="en" suppressHydrationWarning className={fontSans.variable}>
-      <body className="antialiased text-black bg-slate-100 dark:bg-gray-900 dark:text-slate-100">
+      <body className="antialiased text-black bg-slate-50 dark:bg-gray-900 dark:text-slate-100">
         <Providers>
-          <main
-            className="flex flex-col mx-auto max-w-5xl justify-center py-10 px-4"
-            role="main"
-          >
-            <div className="min-h-screen">{children}</div>
-          </main>
+          <div className="mx-auto max-w-5xl py-12" role="main">
+            <header className="flex items-center justify-end">
+              <ThemeSwitch />
+            </header>
+            <main role="main" className="my-4">
+              {children}
+            </main>
+            <footer className="flex items-center justify-center">
+              <span className="mr-1">© {year}</span>
+              <Link
+                href={defaultMetadata.author.url}
+                target="_blank"
+                className="border-b border-dotted border-gray-600 dark:border-slate-50 hover:text-primary-500 hover:border-primary-500 dark:hover:border-primary-500"
+              >
+                {defaultMetadata.author.name}
+              </Link>
+            </footer>
+          </div>
           <Analytics />
         </Providers>
       </body>
