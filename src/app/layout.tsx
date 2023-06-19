@@ -1,7 +1,7 @@
 import './globals.css'
 
 import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
+import { Plus_Jakarta_Sans as PlusJakartaSans } from 'next/font/google'
 import Link from 'next/link'
 
 import Analytics from '@/components/analytics'
@@ -9,7 +9,7 @@ import Providers from '@/components/providers'
 import ThemeSwitch from '@/components/theme-switch'
 import { defaultMetadata, getMetadata } from '@/lib/metadata'
 
-const fontSans = Poppins({
+const fontSans = PlusJakartaSans({
   subsets: ['latin'],
   variable: '--font-sans',
   weight: ['400', '500', '600', '700'],
