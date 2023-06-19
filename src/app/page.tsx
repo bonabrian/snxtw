@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   const icons = [
@@ -40,6 +41,15 @@ export default function Home() {
           Next.js bootstrapped by Tailwind CSS and Typescript setup with useful
           development features.
         </p>
+        <div className="flex items-center justify-center mb-8">
+          <Link
+            href="https://github.com/bonabrian/nextjs-starter-tailwind"
+            target="_blank"
+            className="border-b border-dotted border-gray-600 dark:border-slate-50 hover:text-primary-500 hover:border-primary-500 dark:hover:border-primary-500"
+          >
+            See the repository
+          </Link>
+        </div>
         <div className="flex gap-x-4">
           {icons.map(({ path, alt, className, title }) => (
             <Image
