@@ -37,7 +37,7 @@ const mapKeywords = (keywords?: string | Array<string> | null): string => {
   if (!keywords) return ''
 
   if (Array.isArray(keywords)) {
-    return unique(keywords || []).join(',')
+    return unique(keywords).join(',')
   }
 
   return keywords
@@ -45,7 +45,7 @@ const mapKeywords = (keywords?: string | Array<string> | null): string => {
 
 export const defaultMetadata = {
   applicationName: 'Next.js Starter Template',
-  title: 'Next.js + Tailwind CSS + Typescript Starter',
+  title: 'Next.js Starter Template',
   titleTemplate: '%s | Next.js + Tailwind CSS + Typescript Starter',
   description:
     'Next.js bootstrapped by Tailwind CSS and Typescript setup with useful development features.',
