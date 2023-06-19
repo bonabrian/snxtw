@@ -1,2 +1,2 @@
-export * from './useDarkTheme'
-export * from './useMounted'
+export * from './use-mounted'
+export * from './use-theme'

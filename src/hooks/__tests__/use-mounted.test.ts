@@ -1,6 +1,6 @@
 import { renderHook } from '@testing-library/react'
 
-import { useMounted } from '../useMounted'
+import { useMounted } from '../use-mounted'
 
 describe('useMounted', () => {
   it('should modify the state', () => {

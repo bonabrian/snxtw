@@ -2,10 +2,11 @@
 
 import { RiMoonFill, RiSunFill } from 'react-icons/ri'
 
-import { useDarkTheme } from '@/hooks'
+import { useTheme } from '@/hooks'
 
 const ThemeSwitch = () => {
-  const { isDark, mounted, setTheme } = useDarkTheme()
+  const { theme, mounted, setTheme } = useTheme()
+  const isDark = theme === 'dark'
 
   return (
     <div className="flex items-center w-12 h-6 ml-4">
