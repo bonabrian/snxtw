@@ -1,0 +1,13 @@
+@tailwind base;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased text-black bg-slate-50;
+    @apply dark:text-white dark:bg-gray-900;
+  }
+}

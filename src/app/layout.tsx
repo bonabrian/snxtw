@@ -1,4 +1,4 @@
-import './globals.css'
+import '@/styles/app.css'
 
 import type { Metadata } from 'next'
 import { Plus_Jakarta_Sans as PlusJakartaSans } from 'next/font/google'
@@ -27,7 +27,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning className={fontSans.variable}>
-      <body className="antialiased text-black bg-slate-50 dark:bg-gray-900 dark:text-slate-100">
+      <body>
         <Providers>
           <div className="mx-auto max-w-5xl py-12" role="main">
             <header className="flex items-center justify-end">
