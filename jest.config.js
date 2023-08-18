@@ -5,9 +5,10 @@ const createJestConfig = nextJest({
   dir: './',
 })
 
+/** @type {import('jest').Config} */
 const jestConfig = {
   setupFilesAfterEnv: [
-    '<rootDir>/jest.setup.js',
+    '<rootDir>/jest.setup.ts',
     '<rootDir>/__mocks__/matchMedia.ts',
   ],
   // If using TypeScript with a baseUrl set to the root directory then you need the below for alias' to work

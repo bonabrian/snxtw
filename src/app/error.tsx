@@ -10,7 +10,6 @@ interface ErrorPageProps {
 const ErrorPage = ({ error, reset }: ErrorPageProps) => {
   useEffect(() => {
     // log the error to the error reporting service
-    console.log(error)
   }, [error])
 
   return (
