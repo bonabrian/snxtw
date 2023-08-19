@@ -1,12 +1,13 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { useState } from 'react'
 
-import type { ColorScheme } from '@/types'
+import { Button } from './button'
 
-import Button, { type ButtonVariant } from './button'
+type Variant = 'default' | 'secondary' | 'outline' | 'ghost' | 'link'
+const variants: Variant[] = ['default', 'secondary', 'outline', 'ghost', 'link']
 
-const variants: ButtonVariant[] = ['solid', 'outline', 'ghost', 'link']
-const colorSchemes: ColorScheme[] = ['primary', 'red', 'green', 'blue']
+type Size = 'default' | 'sm' | 'lg'
+const sizes: Size[] = ['default', 'sm', 'lg']
 
 describe('Button', () => {
   it('should render correctly', () => {
@@ -44,8 +45,36 @@ describe('Button', () => {
     expect(screen.getByText(`Button ${variant}`)).toBeInTheDocument()
   })
 
-  it.each(colorSchemes)('should have correct color %s class', (color) => {
-    render(<Button color={color}>{`Button ${color}`}</Button>)
-    expect(screen.getByText(`Button ${color}`)).toBeInTheDocument()
+  it.each(sizes)('should have correct size %s class', (size) => {
+    render(<Button size={size}>{`Button ${size}`}</Button>)
+    expect(screen.getByText(`Button ${size}`)).toBeInTheDocument()
+  })
+
+  it('should render loadingText correctly', () => {
+    render(
+      <Button loading loadingText="Submitting...">
+        Current Children
+      </Button>,
+    )
+
+    expect(screen.getByText('Submitting...')).toBeInTheDocument()
+    expect(screen.queryByText('Current Children')).not.toBeInTheDocument()
+  })
+
+  it('should render without loadingText', () => {
+    render(<Button loading>Current Children</Button>)
+
+    expect(screen.getByText('Current Children')).toBeInTheDocument()
+  })
+
+  it('should render spinner placement end', () => {
+    render(
+      <Button loading loadingText="Submitting..." spinnerPlacement="end">
+        Current Children
+      </Button>,
+    )
+
+    expect(screen.getByText('Submitting...')).toBeInTheDocument()
+    expect(screen.queryByText('Current Children')).not.toBeInTheDocument()
   })
 })

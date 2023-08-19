@@ -1,90 +1,99 @@
+import { cva, type VariantProps } from 'class-variance-authority'
 import { forwardRef } from 'react'
 
 import cn from '@/lib/cn'
-import type { ColorScheme } from '@/types'
+import { ariaAttr, dataAttr } from '@/lib/utils'
 
-export type ButtonVariant = 'solid' | 'outline' | 'ghost' | 'link'
+import { ButtonSpinner } from './button-spinner'
+
 export type HTMLButtonType = 'button' | 'submit' | 'reset'
 
-export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
-  variant?: ButtonVariant
-  color?: ColorScheme
+const buttonVariants = cva(
+  'relative inline-flex items-center justify-center appearance-none select-none whitespace-nowrap align-middle outline-none outline-offset-2 leading-tight rounded-md font-semibold transition-common duration-normal disabled:cursor-not-allowed disabled:opacity-50 disabled:pointer-events-none',
+  {
+    variants: {
+      variant: {
+        default: 'bg-primary text-primary-foreground hover:bg-primary/90',
+        secondary:
+          'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+        outline:
+          'border border-primary text-primary hover:bg-primary hover:text-primary-foreground',
+        ghost: 'hover:bg-accent hover:text-accent-foreground',
+        link: 'underline-offset-4 hover:underline text-primary',
+      },
+      size: {
+        default: 'h-10 px-4',
+        sm: 'h-9 px-3',
+        lg: 'h-11 px-8',
+      },
+    },
+    defaultVariants: {
+      variant: 'default',
+      size: 'default',
+    },
+  },
+)
+
+export interface ButtonProps
+  extends React.HTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
   disabled?: boolean
+  htmlType?: HTMLButtonType
   loading?: boolean
+  loadingText?: string
+  spinnerPlacement?: 'start' | 'end'
 }
 
 type ButtonContentProps = Pick<ButtonProps, 'children'>
 
 const ButtonContent = ({ children }: ButtonContentProps) => children
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
-      variant = 'solid',
-      color = 'primary',
+      variant,
+      size,
       className,
       children,
       disabled,
       loading,
+      loadingText,
+      spinnerPlacement = 'start',
+      htmlType = 'button',
       ...rest
     }: ButtonProps,
     ref,
   ) => {
-    const colorSchemes: Record<ColorScheme, Record<ButtonVariant, string>> = {
-      primary: {
-        solid:
-          'bg-primary-500 text-white hover:[&:not(:disabled)]:bg-primary-600',
-        ghost:
-          'bg-transparent text-primary-500 hover:[&:not(:disabled)]:bg-primary-400/20',
-        link: 'h-auto bg-transparent text-primary-500 hover:[&:not(:disabled)]:underline',
-        outline:
-          'bg-transparent border border-primary-500 text-primary-500 hover:[&:not(:disabled)]:bg-primary-500 hover:[&:not(:disabled)]:text-white',
-      },
-      red: {
-        solid: 'bg-red-500 text-white hover:[&:not(:disabled)]:bg-red-600',
-        ghost:
-          'bg-transparent text-red-500 hover:[&:not(:disabled)]:bg-red-400/20',
-        link: 'h-auto bg-transparent text-red-500 hover:[&:not(:disabled)]:underline',
-        outline:
-          'bg-transparent border border-red-500 text-red-500 hover:[&:not(:disabled)]:bg-red-500 hover:[&:not(:disabled)]:text-white',
-      },
-      green: {
-        solid: 'bg-green-500 text-white hover:[&:not(:disabled)]:bg-green-600',
-        ghost:
-          'bg-transparent text-green-500 hover:[&:not(:disabled)]:bg-green-400/20',
-        link: 'h-auto bg-transparent text-green-500 hover:[&:not(:disabled)]:underline',
-        outline:
-          'bg-transparent border border-green-500 text-green-500 hover:[&:not(:disabled)]:bg-green-500 hover:[&:not(:disabled)]:text-white',
-      },
-      blue: {
-        solid: 'bg-blue-500 text-white hover:[&:not(:disabled)]:bg-blue-600',
-        ghost:
-          'bg-transparent text-blue-500 hover:[&:not(:disabled)]:bg-blue-400/20',
-        link: 'h-auto bg-transparent text-blue-500 hover:[&:not(:disabled)]:underline',
-        outline:
-          'bg-transparent border border-blue-500 text-blue-500 hover:[&:not(:disabled)]:bg-blue-500 hover:[&:not(:disabled)]:text-white',
-      },
-    }
-
     const contentProps = { children }
-    const shouldDisabled = disabled || loading
 
     return (
       <button
         ref={ref}
-        className={cn(
-          'button relative inline-flex items-center justify-center appearance-none select-none whitespace-nowrap align-middle outline-none outline-offset-2 leading-tight rounded-md font-semibold transition-common duration-normal h-10 min-w-10 text-base px-4',
-          'disabled:cursor-not-allowed opacity-60',
-          colorSchemes[color][variant],
-          className,
-        )}
+        className={cn(buttonVariants({ variant, size, className }))}
+        disabled={loading || disabled}
+        type={htmlType}
+        data-loading={dataAttr(loading)}
+        aria-disabled={ariaAttr(loading || disabled)}
         {...rest}
-        disabled={shouldDisabled}
       >
-        <ButtonContent {...contentProps} />
+        {loading && spinnerPlacement === 'start' && (
+          <ButtonSpinner label={loadingText} placement="start" />
+        )}
+
+        {loading ? (
+          loadingText || (
+            <span className="opacity-0">
+              <ButtonContent {...contentProps} />
+            </span>
+          )
+        ) : (
+          <ButtonContent {...contentProps} />
+        )}
+
+        {loading && spinnerPlacement === 'end' && (
+          <ButtonSpinner label={loadingText} placement="end" />
+        )}
       </button>
     )
   },
 )
-
-export default Button
