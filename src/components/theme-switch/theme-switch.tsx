@@ -3,7 +3,7 @@
 import { useTheme } from '@/hooks'
 import cn from '@/lib/cn'
 
-import { Moon, Sun } from '../../icons'
+import { Moon, Sun } from '../icons'
 
 const ThemeSwitch = () => {
   const { theme, mounted, setTheme } = useTheme()

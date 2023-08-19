@@ -2,7 +2,7 @@ import { render } from '@testing-library/react'
 
 import ThemeSwitch from './theme-switch'
 
-jest.mock('../../../hooks/use-theme', () => {
+jest.mock('../../hooks/use-theme', () => {
   return {
     useTheme: () => ({
       theme: 'light',

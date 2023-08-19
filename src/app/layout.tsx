@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 import Analytics from '@/components/analytics'
 import Providers from '@/components/providers'
-import ThemeSwitch from '@/components/ui/theme-switch'
+import ThemeSwitch from '@/components/theme-switch'
 import { defaultMetadata, getMetadata } from '@/lib/metadata'
 
 const fontSans = PlusJakartaSans({
