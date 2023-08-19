@@ -13,16 +13,19 @@ module.exports = {
       },
       colors: {
         // change your color schema here
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
         primary: {
-          100: '#f1e9ff',
-          200: '#e3d3ff',
-          300: '#d4bdff',
-          400: '#c6adff',
-          500: '#b192ff',
-          600: '#876adb',
-          700: '#6249b7',
-          800: '#422e93',
-          900: '#2b1c7a',
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))',
+        },
+        secondary: {
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))',
+        },
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
         },
       },
       minWidth: {
