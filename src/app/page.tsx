@@ -7,7 +7,7 @@ import {
   TailwindCss,
   TypeScript,
   Vercel,
-} from '@/components/ui/icons'
+} from '@/components/icons'
 import cn from '@/lib/cn'
 
 export default function Home() {
