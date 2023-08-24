@@ -27,6 +27,7 @@ module.exports = {
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))',
         },
+        sidebar: 'hsl(var(--sidebar))',
       },
       minWidth: {
         1: '0.25rem',

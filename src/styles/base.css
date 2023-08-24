@@ -2,7 +2,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 0 0% 98%;
     --foreground: 240 10% 3.9%;
 
     --primary: 255 100% 76%;
@@ -13,6 +13,8 @@
 
     --accent: 240 4.8% 95.9%;
     --accent-foreground: 240 5.9% 10%;
+
+    --sidebar: 0, 0%, 100%;
   }
 
   .dark {
@@ -27,6 +29,8 @@
 
     --accent: 240 3.7% 15.9%;
     --accent-foreground: 0 0% 98%;
+
+    --sidebar: 240, 10%, 14%;
   }
 
   html {

@@ -5,8 +5,10 @@ import { Plus_Jakarta_Sans as PlusJakartaSans } from 'next/font/google'
 import Link from 'next/link'
 
 import Analytics from '@/components/analytics'
-import { ThemeProvider } from '@/components/context'
+import { SidebarContextProvider, ThemeProvider } from '@/components/context'
+import Sidebar from '@/components/sidebar'
 import ThemeSwitch from '@/components/theme-switch'
+import cn from '@/lib/cn'
 import { defaultMetadata, getMetadata } from '@/lib/metadata'
 
 const fontSans = PlusJakartaSans({
@@ -29,23 +31,31 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className={fontSans.variable}>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="mx-auto max-w-5xl py-12" role="main">
-            <header className="flex items-center justify-end">
-              <ThemeSwitch />
-            </header>
-            <main role="main" className="my-4">
-              {children}
-            </main>
-            <footer className="flex items-center justify-center">
-              <span className="mr-1">© {year}</span>
-              <Link
-                href={defaultMetadata.author.url}
-                target="_blank"
-                className="border-b border-dotted border-gray-600 dark:border-slate-50 hover:text-primary-500 hover:border-primary-500 dark:hover:border-primary-500"
-              >
-                {defaultMetadata.author.name}
-              </Link>
-            </footer>
+          <div id="__app">
+            <SidebarContextProvider>
+              <div className={cn('flex gap-4')}>
+                <Sidebar />
+                <div
+                  id="__content"
+                  className={cn('flex flex-col flex-grow flex-1')}
+                >
+                  <header className="flex items-center justify-end">
+                    <ThemeSwitch />
+                  </header>
+                  <main role="main">{children}</main>
+                  <footer className="flex items-center justify-center">
+                    <span className="mr-1">© {year}</span>
+                    <Link
+                      href={defaultMetadata.author.url}
+                      target="_blank"
+                      className="border-b border-dotted border-gray-600 dark:border-slate-50 hover:text-primary-500 hover:border-primary-500 dark:hover:border-primary-500"
+                    >
+                      {defaultMetadata.author.name}
+                    </Link>
+                  </footer>
+                </div>
+              </div>
+            </SidebarContextProvider>
           </div>
           <Analytics />
         </ThemeProvider>
