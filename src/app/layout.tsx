@@ -5,7 +5,7 @@ import { Plus_Jakarta_Sans as PlusJakartaSans } from 'next/font/google'
 import Link from 'next/link'
 
 import Analytics from '@/components/analytics'
-import Providers from '@/components/providers'
+import { ThemeProvider } from '@/components/context'
 import ThemeSwitch from '@/components/theme-switch'
 import { defaultMetadata, getMetadata } from '@/lib/metadata'
 
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={fontSans.variable}>
       <body>
-        <Providers>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="mx-auto max-w-5xl py-12" role="main">
             <header className="flex items-center justify-end">
               <ThemeSwitch />
@@ -48,7 +48,7 @@ export default function RootLayout({
             </footer>
           </div>
           <Analytics />
-        </Providers>
+        </ThemeProvider>
       </body>
     </html>
   )
