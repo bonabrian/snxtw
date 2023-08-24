@@ -22,3 +22,6 @@ export const getBaseUrl = () => {
     ? 'http://localhost:3000'
     : 'https://tsnext-tw.vercel.app'
 }
+
+export const isClient = typeof window !== 'undefined'
+export const isServer = typeof window === 'undefined'
