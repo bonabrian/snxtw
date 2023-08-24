@@ -36,7 +36,7 @@ const Sidebar = () => {
     <>
       <div
         className={cn(
-          'fixed inset-0 left-0 right-0 z-[1] bg-background/5 backdrop-blur-sm md:hidden',
+          'fixed inset-0 left-0 right-0 z-[1] bg-accent/70 md:hidden',
           show ? 'block' : 'hidden',
         )}
         onClick={() => setShow(false)}
@@ -46,7 +46,6 @@ const Sidebar = () => {
         ref={sidebarRef}
         className={cn(
           'bg-sidebar z-[1] overflow-hidden h-screen fixed transition-all duration-faster translate-x-0',
-          'md:relative',
           { 'w-64': !collapsed },
           { 'w-16': collapsed },
           { '-translate-x-full': !show },
