@@ -10,7 +10,7 @@ const ThemeSwitch = () => {
   const isDark = theme === 'dark'
 
   return (
-    <div className={cn('flex items-center w-12 h-6 ml-4')}>
+    <div className={cn('flex items-center w-12 h-6')}>
       {mounted && (
         <button
           className={cn(

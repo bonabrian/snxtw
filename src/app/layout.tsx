@@ -6,8 +6,8 @@ import Link from 'next/link'
 
 import Analytics from '@/components/analytics'
 import { SidebarContextProvider, ThemeProvider } from '@/components/context'
+import Header from '@/components/header'
 import Sidebar from '@/components/sidebar'
-import ThemeSwitch from '@/components/theme-switch'
 import cn from '@/lib/cn'
 import { defaultMetadata, getMetadata } from '@/lib/metadata'
 
@@ -39,9 +39,7 @@ export default function RootLayout({
                   id="__content"
                   className={cn('flex flex-col flex-grow flex-1')}
                 >
-                  <header className="flex items-center justify-end">
-                    <ThemeSwitch />
-                  </header>
+                  <Header />
                   <main role="main">{children}</main>
                   <footer className="flex items-center justify-center">
                     <span className="mr-1">© {year}</span>
