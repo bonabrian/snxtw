@@ -13,13 +13,15 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
+    "@t3-oss/env-nextjs": "^0.7.1",
     "@vercel/analytics": "^1.1.1",
     "@vercel/og": "^0.5.18",
     "class-variance-authority": "^0.7.0",
     "next": "13.5.5",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.8.0",
