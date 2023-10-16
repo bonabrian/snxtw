@@ -25,17 +25,17 @@ const ClientLayout = ({ children }: ClientLayoutProps) => {
       <div
         id="__content"
         className={cn(
-          'flex flex-col flex-grow flex-1 transition-[padding] duration-faster pl-0',
+          'flex flex-1 flex-grow flex-col pl-0 transition-[padding] duration-faster',
           collapsed ? 'md:pl-16' : 'md:pl-64',
         )}
       >
-        <header className="flex px-1 py-4 items-center justify-between md:justify-end">
+        <header className="flex items-center justify-between px-1 py-4 md:justify-end">
           <Button
             variant="link"
             onClick={() => setShow(!show)}
-            className="ml-3 p-1 rounded-full w-10 h-10 bg-accent md:hidden"
+            className="ml-3 h-10 w-10 rounded-full bg-accent p-1 md:hidden"
           >
-            <Menu className={cn('w-6 h-6 fill-foreground')} />
+            <Menu className={cn('h-6 w-6 fill-foreground')} />
           </Button>
           <ThemeSwitch />
         </header>
@@ -45,7 +45,7 @@ const ClientLayout = ({ children }: ClientLayoutProps) => {
           <Link
             href={defaultMetadata.author.url}
             target="_blank"
-            className="border-b border-dotted border-gray-600 dark:border-slate-50 hover:text-primary-500 hover:border-primary-500 dark:hover:border-primary-500"
+            className="hover:text-primary-500 hover:border-primary-500 dark:hover:border-primary-500 border-b border-dotted border-gray-600 dark:border-slate-50"
           >
             {defaultMetadata.author.name}
           </Link>

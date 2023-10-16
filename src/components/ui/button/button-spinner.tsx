@@ -5,7 +5,7 @@ import cn from '@/lib/cn'
 import { Spinner } from '../spinner'
 
 const buttonSpinnerVariants = cva(
-  'flex items-center leading-normal text-base',
+  'flex items-center text-base leading-normal',
   {
     variants: {
       placement: {

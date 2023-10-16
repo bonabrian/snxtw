@@ -11,13 +11,13 @@ const Header = () => {
   const { show, setShow } = useSidebar()
 
   return (
-    <header className="flex px-1 py-4 items-center justify-between md:justify-end">
+    <header className="flex items-center justify-between px-1 py-4 md:justify-end">
       <Button
         variant="link"
         onClick={() => setShow(!show)}
-        className="ml-3 p-1 rounded-full w-10 h-10 bg-accent md:hidden"
+        className="ml-3 h-10 w-10 rounded-full bg-accent p-1 md:hidden"
       >
-        <Menu className={cn('w-6 h-6 fill-foreground')} />
+        <Menu className={cn('h-6 w-6 fill-foreground')} />
       </Button>
       <ThemeSwitch />
     </header>

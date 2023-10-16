@@ -9,7 +9,7 @@ export const TypeScript = ({ className, ...rest }: ComponentProps<'svg'>) => {
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
-      className={cn('w-4 h-4', className)}
+      className={cn('h-4 w-4', className)}
       {...rest}
     >
       <title>TypeScript</title>
@@ -25,7 +25,7 @@ export const Vercel = ({ className, ...rest }: ComponentProps<'svg'>) => {
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
-      className={cn('w-4 h-4', className)}
+      className={cn('h-4 w-4', className)}
       {...rest}
     >
       <title>Vercel</title>
@@ -41,7 +41,7 @@ export const NextJs = ({ className, ...rest }: ComponentProps<'svg'>) => {
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
-      className={cn('w-4 h-4', className)}
+      className={cn('h-4 w-4', className)}
       {...rest}
     >
       <title>Next.js</title>
@@ -57,7 +57,7 @@ export const TailwindCss = ({ className, ...rest }: ComponentProps<'svg'>) => {
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
-      className={cn('w-4 h-4', className)}
+      className={cn('h-4 w-4', className)}
       {...rest}
     >
       <title>Tailwind CSS</title>
@@ -73,7 +73,7 @@ export const Eslint = ({ className, ...rest }: ComponentProps<'svg'>) => {
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
-      className={cn('w-4 h-4', className)}
+      className={cn('h-4 w-4', className)}
       {...rest}
     >
       <title>ESLint</title>
@@ -89,7 +89,7 @@ export const Jest = ({ className, ...rest }: ComponentProps<'svg'>) => {
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
-      className={cn('w-4 h-4', className)}
+      className={cn('h-4 w-4', className)}
       {...rest}
     >
       <title>Jest</title>
@@ -104,7 +104,7 @@ export const Sun = ({ className, ...rest }: ComponentProps<'svg'>) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="currentColor"
-      className={cn('w-4 h-4', className)}
+      className={cn('h-4 w-4', className)}
       {...rest}
     >
       <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
@@ -118,7 +118,7 @@ export const Moon = ({ className, ...rest }: ComponentProps<'svg'>) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="currentColor"
-      className={cn('w-4 h-4', className)}
+      className={cn('h-4 w-4', className)}
       {...rest}
     >
       <path
@@ -136,7 +136,7 @@ export const Menu = ({ className, ...rest }: ComponentProps<'svg'>) => {
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
       viewBox="0 0 256 256"
-      className={cn('w-5 h-5', className)}
+      className={cn('h-5 w-5', className)}
       {...rest}
     >
       <path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
@@ -150,7 +150,7 @@ export const SquaresFour = ({ className, ...rest }: ComponentProps<'svg'>) => {
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
       viewBox="0 0 256 256"
-      className={cn('w-5 h-5', className)}
+      className={cn('h-5 w-5', className)}
       {...rest}
     >
       <path d="M100,36H56A20,20,0,0,0,36,56v44a20,20,0,0,0,20,20h44a20,20,0,0,0,20-20V56A20,20,0,0,0,100,36ZM96,96H60V60H96ZM200,36H156a20,20,0,0,0-20,20v44a20,20,0,0,0,20,20h44a20,20,0,0,0,20-20V56A20,20,0,0,0,200,36Zm-4,60H160V60h36Zm-96,40H56a20,20,0,0,0-20,20v44a20,20,0,0,0,20,20h44a20,20,0,0,0,20-20V156A20,20,0,0,0,100,136Zm-4,60H60V160H96Zm104-60H156a20,20,0,0,0-20,20v44a20,20,0,0,0,20,20h44a20,20,0,0,0,20-20V156A20,20,0,0,0,200,136Zm-4,60H160V160h36Z"></path>
@@ -164,7 +164,7 @@ export const CaretLeft = ({ className, ...rest }: ComponentProps<'svg'>) => {
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
       viewBox="0 0 256 256"
-      className={cn('w-5 h-5', className)}
+      className={cn('h-5 w-5', className)}
       {...rest}
     >
       <path d="M168.49,199.51a12,12,0,0,1-17,17l-80-80a12,12,0,0,1,0-17l80-80a12,12,0,0,1,17,17L97,128Z"></path>
@@ -178,7 +178,7 @@ export const PuzzlePiece = ({ className, ...rest }: ComponentProps<'svg'>) => {
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
       viewBox="0 0 256 256"
-      className={cn('w-5 h-5', className)}
+      className={cn('h-5 w-5', className)}
       {...rest}
     >
       <path d="M222.41,155.16a12,12,0,0,0-11.56-.69A16,16,0,0,1,188,139,16.2,16.2,0,0,1,202.8,124a15.83,15.83,0,0,1,8,1.5A12,12,0,0,0,228,114.7V72a20,20,0,0,0-20-20H176a40.15,40.15,0,0,0-12.62-29.16,39.67,39.67,0,0,0-29.94-10.76,40.08,40.08,0,0,0-37.34,37C96,50.07,96,51,96,52H64A20,20,0,0,0,44,72v28a40.15,40.15,0,0,0-29.16,12.62A40,40,0,0,0,41.1,179.9a28.3,28.3,0,0,0,2.9.1v28a20,20,0,0,0,20,20H208a20,20,0,0,0,20-20V165.31A12,12,0,0,0,222.41,155.16ZM204,204H68V165.31a12,12,0,0,0-17.15-10.84A15.9,15.9,0,0,1,42.8,156,16.2,16.2,0,0,1,28,141.06a16,16,0,0,1,22.82-15.52A12,12,0,0,0,68,114.7V76h42.7a12,12,0,0,0,10.83-17.15A15.9,15.9,0,0,1,120,50.8,16.19,16.19,0,0,1,134.94,36a16,16,0,0,1,15.53,22.81A12,12,0,0,0,161.31,76H204v24c-1,0-1.93,0-2.9.11A40,40,0,0,0,204,180h0Z"></path>

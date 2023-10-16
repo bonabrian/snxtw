@@ -9,7 +9,7 @@ import { ButtonSpinner } from './button-spinner'
 export type HTMLButtonType = 'button' | 'submit' | 'reset'
 
 const buttonVariants = cva(
-  'relative inline-flex items-center justify-center appearance-none select-none whitespace-nowrap align-middle outline-none outline-offset-2 leading-tight rounded-md font-semibold transition-common duration-normal disabled:cursor-not-allowed disabled:opacity-50 disabled:pointer-events-none',
+  'relative inline-flex select-none appearance-none items-center justify-center whitespace-nowrap rounded-md align-middle font-semibold leading-tight outline-none outline-offset-2 transition-common duration-normal disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50',
   {
     variants: {
       variant: {
@@ -19,7 +19,7 @@ const buttonVariants = cva(
         outline:
           'border border-primary text-primary hover:bg-primary hover:text-primary-foreground',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
-        link: 'underline-offset-4 hover:underline text-primary',
+        link: 'text-primary underline-offset-4 hover:underline',
       },
       size: {
         default: 'h-10 px-4',

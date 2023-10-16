@@ -19,12 +19,12 @@ const navItems: NavItem[] = [
   {
     label: 'Home',
     path: '/',
-    icon: <SquaresFour className={cn('w-6 h-6')} />,
+    icon: <SquaresFour className={cn('h-6 w-6')} />,
   },
   {
     label: 'Built-in Components',
     path: '/components',
-    icon: <PuzzlePiece className={cn('w-6 h-6')} />,
+    icon: <PuzzlePiece className={cn('h-6 w-6')} />,
   },
 ]
 
@@ -45,18 +45,18 @@ const Sidebar = () => {
         id="__sidebar"
         ref={sidebarRef}
         className={cn(
-          'bg-sidebar z-[1] overflow-hidden h-screen fixed transition-all duration-faster translate-x-0',
+          'fixed z-[1] h-screen translate-x-0 overflow-hidden bg-sidebar transition-all duration-faster',
           { 'w-64': !collapsed },
           { 'w-16': collapsed },
           { '-translate-x-full': !show },
         )}
       >
-        <nav className={cn('flex flex-col py-4 h-full')}>
+        <nav className={cn('flex h-full flex-col py-4')}>
           <ul className={cn('my-2 flex flex-col items-stretch gap-2')}>
             {navItems.map(({ label, path, icon }) => (
               <li
                 key={label}
-                className={cn('transition-colors duration-normal mx-3 group', {
+                className={cn('group mx-3 transition-colors duration-normal', {
                   'rounded-md gap-4': !collapsed,
                   'justify-center rounded-full w-10 h-10': collapsed,
                 })}
@@ -64,7 +64,7 @@ const Sidebar = () => {
                 <Link
                   href={path}
                   className={cn(
-                    'flex gap-2 items-center p-2 rounded-lg',
+                    'flex items-center gap-2 rounded-lg p-2',
                     'group-hover:bg-accent group-hover:text-accent-foreground',
                   )}
                 >
@@ -77,7 +77,7 @@ const Sidebar = () => {
         </nav>
         <div
           className={cn(
-            'absolute w-fit h-fit hidden bottom-4 right-2',
+            'absolute bottom-4 right-2 hidden h-fit w-fit',
             'md:flex',
             {
               'justify-center right-4': collapsed,
@@ -87,10 +87,10 @@ const Sidebar = () => {
           <Button
             variant="link"
             onClick={() => setCollapsed(!collapsed)}
-            className="rounded-full w-8 h-8 p-0 shadow-sm bg-accent"
+            className="h-8 w-8 rounded-full bg-accent p-0 shadow-sm"
           >
             <CaretLeft
-              className={cn('w-4 h-4 fill-foreground', {
+              className={cn('h-4 w-4 fill-foreground', {
                 'rotate-180': collapsed,
               })}
             />

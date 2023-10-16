@@ -4,14 +4,14 @@ import { forwardRef } from 'react'
 import cn from '@/lib/cn'
 
 const spinnerVariants = cva(
-  'inline-block border-current border-solid border-2 border-b-transparent border-l-transparent rounded-full animate-spin',
+  'inline-block animate-spin rounded-full border-2 border-solid border-current border-b-transparent border-l-transparent',
   {
     variants: {
       size: {
-        xs: 'w-3 h-3',
-        sm: 'w-4 h-4',
-        md: 'w-6 h-6',
-        lg: 'w-8 h-6',
+        xs: 'h-3 w-3',
+        sm: 'h-4 w-4',
+        md: 'h-6 w-6',
+        lg: 'h-6 w-8',
       },
     },
     defaultVariants: {
