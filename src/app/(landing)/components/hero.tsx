@@ -5,6 +5,33 @@ import Icons from '@/components/icons'
 import { buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
+const stack = [
+  {
+    title: 'TypeScript',
+    link: 'https://www.typescriptlang.org/',
+    icon: Icons.typeScript,
+    className: 'hover:text-[#3178C6]',
+  },
+  {
+    title: 'Next.js',
+    link: 'https://nextjs.org/',
+    icon: Icons.nextJs,
+    className: 'hover:text-foreground',
+  },
+  {
+    title: 'Tailwind CSS',
+    link: 'https://tailwindcss.com/',
+    icon: Icons.tailwindCss,
+    className: 'hover:text-[#06B6D4]',
+  },
+  {
+    title: 'Vercel',
+    link: 'https://vercel.com/',
+    icon: Icons.vercel,
+    className: 'hover:text-foreground',
+  },
+]
+
 const Hero = async () => {
   const { stargazers_count: stars } = await fetch(
     'https://api.github.com/repos/bonabrian/nextjs-starter-tailwind',
@@ -19,7 +46,7 @@ const Hero = async () => {
     <div className={cn('container')}>
       <div
         className={cn(
-          'flex h-full min-h-[calc(100vh-80px)] w-full flex-col items-center justify-center py-16',
+          'flex h-full min-h-[calc(100vh-64px)] w-full flex-col items-center justify-center space-y-16 py-16',
           'lg:py-24',
         )}
       >
@@ -67,6 +94,25 @@ const Hero = async () => {
               <span>on</span>
               <Icons.gitHub className={cn('h-4 w-4')} />
             </Link>
+          </div>
+        </div>
+        <div className={cn('flex flex-col')}>
+          <h2 className="mb-4 text-center text-2xl font-semibold tracking-tight">
+            Tech Stack
+          </h2>
+          <div
+            className={cn('flex flex-wrap items-center justify-center gap-6')}
+          >
+            {stack.map((item, index) => (
+              <Link
+                key={`${index}.${item.title}`}
+                href={item.link}
+                className={cn('transition-colors', item.className)}
+                title={item.title}
+              >
+                <item.icon className={cn('h-10 w-10')} />
+              </Link>
+            ))}
           </div>
         </div>
       </div>
