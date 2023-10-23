@@ -1,11 +1,11 @@
 'use client'
 
-import cn from '@/lib/cn'
+import { cn } from '@/lib/utils'
 
 import { useSidebar } from '../context'
 import { Menu } from '../icons'
 import ThemeSwitch from '../theme-switch'
-import { Button } from '../ui'
+import { Button } from '../ui/button'
 
 const Header = () => {
   const { show, setShow } = useSidebar()

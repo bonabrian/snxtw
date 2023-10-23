@@ -1,3 +1,6 @@
+import { type ClassValue, clsx } from 'clsx'
+import { twMerge } from 'tailwind-merge'
+
 type Booleanish = boolean | 'true' | 'false'
 
 export const dataAttr = (condition: boolean | undefined) =>
@@ -5,6 +8,10 @@ export const dataAttr = (condition: boolean | undefined) =>
 
 export const ariaAttr = (condition: boolean | undefined) =>
   condition ? true : undefined
+
+export const cn = (...classes: ClassValue[]): string => {
+  return twMerge(clsx(...classes))
+}
 
 export const unique = <T, Key extends keyof T>(
   array: Array<T> | T[],

@@ -3,11 +3,11 @@
 import Link from 'next/link'
 import { useRef } from 'react'
 
-import cn from '@/lib/cn'
+import { cn } from '@/lib/utils'
 
 import { useSidebar } from '../context'
 import { CaretLeft, PuzzlePiece, SquaresFour } from '../icons'
-import { Button } from '../ui'
+import { Button } from '../ui/button'
 
 interface NavItem {
   label: string
@@ -45,7 +45,7 @@ const Sidebar = () => {
         id="__sidebar"
         ref={sidebarRef}
         className={cn(
-          'fixed z-[1] h-screen translate-x-0 overflow-hidden bg-sidebar transition-all duration-faster',
+          'bg-sidebar duration-faster fixed z-[1] h-screen translate-x-0 overflow-hidden transition-all',
           { 'w-64': !collapsed },
           { 'w-16': collapsed },
           { '-translate-x-full': !show },
@@ -56,7 +56,7 @@ const Sidebar = () => {
             {navItems.map(({ label, path, icon }) => (
               <li
                 key={label}
-                className={cn('group mx-3 transition-colors duration-normal', {
+                className={cn('duration-normal group mx-3 transition-colors', {
                   'rounded-md gap-4': !collapsed,
                   'justify-center rounded-full w-10 h-10': collapsed,
                 })}

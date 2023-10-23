@@ -8,7 +8,7 @@ import {
   TypeScript,
   Vercel,
 } from '@/components/icons'
-import cn from '@/lib/cn'
+import { cn } from '@/lib/utils'
 
 export default function Home() {
   const stack = [

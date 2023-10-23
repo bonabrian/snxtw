@@ -1,4 +1,4 @@
-import { getBaseUrl, unique } from '../utils'
+import { cn, getBaseUrl, unique } from '../utils'
 
 describe('utils', () => {
   describe('getBaseUrl', () => {
@@ -40,6 +40,14 @@ describe('utils', () => {
         { id: 1, value: '2' },
       ]
       expect(unique(values, 'id')).toEqual([{ id: 1, value: '1' }])
+    })
+  })
+
+  describe('cn', () => {
+    it('should return merged tailwind classes', () => {
+      const classes = 'bg-primary-500 bg-primary-600'
+
+      expect(cn(classes)).toBe('bg-primary-600')
     })
   })
 })

@@ -1,7 +1,7 @@
 'use client'
 
 import { useTheme } from '@/hooks'
-import cn from '@/lib/cn'
+import { cn } from '@/lib/utils'
 
 import { Moon, Sun } from '../icons'
 

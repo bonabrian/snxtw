@@ -6,9 +6,9 @@ import { useSidebar } from '@/components/context'
 import { Menu } from '@/components/icons'
 import Sidebar from '@/components/sidebar'
 import ThemeSwitch from '@/components/theme-switch'
-import { Button } from '@/components/ui'
+import { Button } from '@/components/ui/button'
 import { siteConfig } from '@/data/app'
-import cn from '@/lib/cn'
+import { cn } from '@/lib/utils'
 
 interface ClientLayoutProps {
   children: React.ReactNode
@@ -25,7 +25,7 @@ const ClientLayout = ({ children }: ClientLayoutProps) => {
       <div
         id="__content"
         className={cn(
-          'flex flex-1 flex-grow flex-col pl-0 transition-[padding] duration-faster',
+          'duration-faster flex flex-1 flex-grow flex-col pl-0 transition-[padding]',
           collapsed ? 'md:pl-16' : 'md:pl-64',
         )}
       >
