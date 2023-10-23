@@ -1,6 +1,6 @@
 # Next.js (App Router) + Tailwind CSS + Typescript Starter Template
 
-<img src="https://github.com/bonabrian/nextjs-starter-tailwind/assets/14372275/a6a61d64-0046-490d-8e0d-920346b5b6ea" />
+<img alt="snxtw" src="https://github.com/bonabrian/snxtw/assets/14372275/137dc56d-b0a4-4e49-b91d-a30137ed5166">
 
 <div align="center">
   <a href="https://vercel.com/new/clone?repository-url=https://github.com/bonabrian/nextjs-starter-tailwind" target="_blank"><img src="https://vercel.com/button" alt="Deploy with Vercel" /></a> <a href="https://app.netlify.com/start/deploy?repository=https://github.com/bonabrian/nextjs-starter-tailwind" target="_blank"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" /></a> <a href="https://railway.app?referralCode=vMv3VV" target="_blank"><img src="https://railway.app/button.svg" alt="Deploy on Railway" height="32px" /></a>
