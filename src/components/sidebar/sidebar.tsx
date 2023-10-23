@@ -5,8 +5,8 @@ import { useRef } from 'react'
 
 import { cn } from '@/lib/utils'
 
-import { useSidebar } from '../context'
 import { CaretLeft, PuzzlePiece, SquaresFour } from '../icons'
+import { useSidebar } from '../providers'
 import { Button } from '../ui/button'
 
 interface NavItem {

@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import { Plus_Jakarta_Sans as PlusJakartaSans } from 'next/font/google'
 
 import Analytics from '@/components/analytics'
-import { SidebarContextProvider, ThemeProvider } from '@/components/context'
+import { ThemeProvider } from '@/components/providers'
 import { seo } from '@/data/meta'
 
 import ClientLayout from './client.layout'
@@ -27,9 +27,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div id="__app">
-            <SidebarContextProvider>
-              <ClientLayout>{children}</ClientLayout>
-            </SidebarContextProvider>
+            <ClientLayout>{children}</ClientLayout>
           </div>
           <Analytics />
         </ThemeProvider>
