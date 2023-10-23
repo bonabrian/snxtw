@@ -5,26 +5,25 @@ import { useRef } from 'react'
 
 import { cn } from '@/lib/utils'
 
-import { CaretLeft, PuzzlePiece, SquaresFour } from '../icons'
 import { useSidebar } from '../providers'
 import { Button } from '../ui/button'
 
 interface NavItem {
   label: string
   path: string
-  icon: JSX.Element
+  icon?: JSX.Element
 }
 
 const navItems: NavItem[] = [
   {
     label: 'Home',
     path: '/',
-    icon: <SquaresFour className={cn('h-6 w-6')} />,
+    // icon: <SquaresFour className={cn('h-6 w-6')} />,
   },
   {
     label: 'Built-in Components',
     path: '/components',
-    icon: <PuzzlePiece className={cn('h-6 w-6')} />,
+    // icon: <PuzzlePiece className={cn('h-6 w-6')} />,
   },
 ]
 
@@ -89,11 +88,11 @@ const Sidebar = () => {
             onClick={() => setCollapsed(!collapsed)}
             className="h-8 w-8 rounded-full bg-accent p-0 shadow-sm"
           >
-            <CaretLeft
+            {/* <CaretLeft
               className={cn('h-4 w-4 fill-foreground', {
                 'rotate-180': collapsed,
               })}
-            />
+            /> */}
           </Button>
         </div>
       </aside>

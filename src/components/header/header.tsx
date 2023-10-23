@@ -1,21 +1,33 @@
 'use client'
 
+import Link from 'next/link'
+
+import { siteConfig } from '@/data/app'
+import { useOnScroll } from '@/hooks'
 import { cn } from '@/lib/utils'
 
-import { Menu } from '../icons'
 import ThemeSwitch from '../theme-switch'
-import { Button } from '../ui/button'
 
 const Header = () => {
+  const isScrolled = useOnScroll()
+
   return (
-    <header className="flex items-center justify-between px-1 py-4 md:justify-end">
-      <Button
-        variant="link"
-        className="ml-3 h-10 w-10 rounded-full bg-accent p-1 md:hidden"
-      >
-        <Menu className={cn('h-6 w-6 fill-foreground')} />
-      </Button>
-      <ThemeSwitch />
+    <header
+      className={cn(
+        'sticky top-0 z-50 h-16 w-full bg-transparent',
+        isScrolled
+          ? 'shadow-sm backdrop-blur-[10px] duration-300 ease-in-out'
+          : '',
+      )}
+    >
+      <div className={cn('container h-full')}>
+        <div className={cn('flex h-full items-center justify-between')}>
+          <Link href="/" className={cn('text-2xl font-bold')}>
+            {siteConfig.name}
+          </Link>
+          <ThemeSwitch />
+        </div>
+      </div>
     </header>
   )
 }
