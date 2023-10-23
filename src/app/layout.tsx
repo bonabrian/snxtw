@@ -5,7 +5,7 @@ import { Plus_Jakarta_Sans as PlusJakartaSans } from 'next/font/google'
 
 import Analytics from '@/components/analytics'
 import { SidebarContextProvider, ThemeProvider } from '@/components/context'
-import { getMetadata } from '@/lib/metadata'
+import { seo } from '@/data/meta'
 
 import ClientLayout from './client.layout'
 
@@ -15,7 +15,7 @@ const fontSans = PlusJakartaSans({
   weight: ['400', '500', '600', '700'],
 })
 
-export const metadata: Metadata = getMetadata()
+export const metadata: Metadata = seo()
 
 export default function RootLayout({
   children,
