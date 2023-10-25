@@ -1,4 +1,4 @@
-import '@/styles/app.css'
+import '../global.css'
 
 import type { Metadata } from 'next'
 import { Plus_Jakarta_Sans as PlusJakartaSans } from 'next/font/google'
