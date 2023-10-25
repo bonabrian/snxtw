@@ -54,7 +54,7 @@ const Hero = async () => {
           <h1
             className={cn(
               'bg-gradient-to-br from-gray-900 via-gray-800 to-gray-400 bg-clip-text text-center text-4xl font-bold tracking-tight text-transparent drop-shadow-sm',
-              'dark:from-gray-100 dark:to-gray-900',
+              'dark:from-gray-100 dark:to-gray-800',
               'md:text-6xl md:leading-tight',
             )}
           >
