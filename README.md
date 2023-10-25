@@ -3,7 +3,7 @@
 <img alt="snxtw" src="https://github.com/bonabrian/snxtw/assets/14372275/137dc56d-b0a4-4e49-b91d-a30137ed5166">
 
 <div align="center">
-  <a href="https://vercel.com/new/clone?repository-url=https://github.com/bonabrian/nextjs-starter-tailwind" target="_blank"><img src="https://vercel.com/button" alt="Deploy with Vercel" /></a> <a href="https://app.netlify.com/start/deploy?repository=https://github.com/bonabrian/nextjs-starter-tailwind" target="_blank"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" /></a> <a href="https://railway.app?referralCode=vMv3VV" target="_blank"><img src="https://railway.app/button.svg" alt="Deploy on Railway" height="32px" /></a>
+  <a href="https://vercel.com/new/clone?repository-url=https://github.com/bonabrian/snxtw" target="_blank"><img src="https://vercel.com/button" alt="Deploy with Vercel" /></a> <a href="https://app.netlify.com/start/deploy?repository=https://github.com/bonabrian/snxtw" target="_blank"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" /></a> <a href="https://railway.app?referralCode=vMv3VV" target="_blank"><img src="https://railway.app/button.svg" alt="Deploy on Railway" height="32px" /></a>
 
   <p>A <a href="https://nextjs.org/docs/app" target="_blank">Next.js</a> (App Router) starter kit template with <a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a> and <a href="https://www.typescriptlang.org/" target="_blank">Typescript</a></p>
 </div>
@@ -36,12 +36,12 @@ This repository is 🔋 ⚡ battery packed with:
 
 2. Using `create-next-app`
    ```bash
-   npx create-next-app -e https://github.com/bonabrian/nextjs-starter-tailwind project-name
+   npx create-next-app -e https://github.com/bonabrian/snxtw project-name
    ```
 
 3. Using `degit`
    ```bash
-   npx degit bonabrian/nextjs-starter-tailwind YOUR_APP_NAME
+   npx degit bonabrian/snxtw YOUR_APP_NAME
    ```
 
 ### 2. After cloning this project, install dependencies
