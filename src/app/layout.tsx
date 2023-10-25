@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { Plus_Jakarta_Sans as PlusJakartaSans } from 'next/font/google'
 
 import Analytics from '@/components/analytics'
+import Footer from '@/components/footer'
 import Header from '@/components/header'
 import { ThemeProvider } from '@/components/providers'
 import { seo } from '@/data/meta'
@@ -33,6 +34,7 @@ export default function RootLayout({
           />
           <Header />
           <main className={cn('relative z-10')}>{children}</main>
+          <Footer />
           <Analytics />
         </ThemeProvider>
       </body>
