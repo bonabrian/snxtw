@@ -1,7 +1,6 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-import { siteConfig } from '@/data/app'
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/utils';
 
 const Footer = () => {
   return (
@@ -19,49 +18,17 @@ const Footer = () => {
               'text-center text-sm leading-loose text-muted-foreground',
               'md:text-left',
             )}
-          >
-            Developed by{' '}
-            <Link
-              href={siteConfig.author.url}
-              target="_blank"
-              rel="noreferrer"
-              className={cn('font-medium underline underline-offset-4')}
-            >
-              {siteConfig.author.name}
-            </Link>
-          </p>
-          <Link
-            href="https://github.com/bonabrian/snxtw"
-            target="_blank"
-            rel="noreferrer"
-            className={cn(
-              'text-center text-xs leading-loose text-muted-foreground',
-              'md:text-left',
-              'hover:underline hover:underline-offset-4',
-            )}
-          >
-            See recent updates on GitHub
-          </Link>
+          ></p>
         </div>
         <div
           className={cn(
             'space-x-4 text-center text-sm leading-loose text-muted-foreground',
             'md:text-left',
           )}
-        >
-          <Link
-            href="#"
-            className={cn(
-              'font-semibold',
-              'hover:underline hover:underline-offset-4',
-            )}
-          >
-            About
-          </Link>
-        </div>
+        ></div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
