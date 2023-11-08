@@ -1,9 +1,12 @@
-import type { Metadata } from 'next'
+import type { Metadata } from 'next';
 
-import { siteConfig } from '../app'
-import { buildOgImageURL, fullURL, mapKeywords } from './builder'
+import { siteConfig } from '../app';
+import { buildOgImageURL, fullURL, mapKeywords } from './builder';
 
-const defaultOgImage = buildOgImageURL(siteConfig.title, siteConfig.description)
+const defaultOgImage = buildOgImageURL(
+  siteConfig.title,
+  siteConfig.description,
+);
 
 export const DEFAULT_METADATA: Metadata = {
   metadataBase: fullURL(),
@@ -45,4 +48,4 @@ export const DEFAULT_METADATA: Metadata = {
     creator: siteConfig.author.twitter,
     images: defaultOgImage,
   },
-}
+};

@@ -1,9 +1,10 @@
 'use client';
 
+import disableScroll from 'disable-scroll';
 import React from 'react';
-// import { button } from '@/components/ui/button';
 
-import ErrPopover from './components/err-popover';
+// import { button } from '@/components/ui/button';
+import ErrPopover from '../../components/err-popover';
 
 const axioserr = {
   downloadError: {
@@ -42,6 +43,15 @@ const axioserr = {
   },
 };
 
+function callback(action: any, data: any) {
+  // eslint-disable-next-line no-console
+  console.log(action, data);
+
+  if (data.placement === 'center') {
+    disableScroll[action === 'open' ? 'on' : 'off']();
+  }
+}
+
 export default function Home() {
   const [downloadError, setDownloadError] = React.useState<{}>({});
 
@@ -66,7 +76,7 @@ export default function Home() {
           </button>
         )}
         {Object.keys(downloadError).length > 0 && (
-          <ErrPopover err={downloadError} />
+          <ErrPopover cb={callback} err={downloadError} />
         )}
       </div>
     </>

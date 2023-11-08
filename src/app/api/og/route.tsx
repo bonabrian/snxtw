@@ -1,15 +1,16 @@
-import { ImageResponse } from '@vercel/og'
-import type { NextRequest } from 'next/server'
-import { NextResponse } from 'next/server'
+import { ImageResponse } from '@vercel/og';
+import type { NextRequest } from 'next/server';
+import { NextResponse } from 'next/server';
 
-export const runtime = 'edge'
+export const runtime = 'edge';
 
 export const GET = async (req: NextRequest) => {
   try {
-    const { searchParams } = new URL(req.url)
-
-    const title = searchParams?.get('title')?.slice(0, 100)
-    const description = searchParams?.get('description')?.slice(0, 200)
+    const { searchParams } = new URL(req.url);
+    console.group('og/route.tsx');
+    console.log('searchParams: ', searchParams);
+    const title = searchParams?.get('title')?.slice(0, 100);
+    const description = searchParams?.get('description')?.slice(0, 200);
 
     return new ImageResponse(
       (
@@ -30,15 +31,15 @@ export const GET = async (req: NextRequest) => {
         width: 1200,
         height: 630,
       },
-    )
+    );
   } catch (e) {
     // @ts-expect-error
-    const error = e?.message || e?.stackTrace.toString() || 'Unexpected error'
-    console.error('Error generate image: ', error)
+    const error = e?.message || e?.stackTrace.toString() || 'Unexpected error';
+    console.error('Error generate image: ', error);
 
     return new NextResponse(
       JSON.stringify({ message: 'Failed to generate image' }),
       { status: 500, headers: { 'Content-Type': 'application/json' } },
-    )
+    );
   }
-}
+};
