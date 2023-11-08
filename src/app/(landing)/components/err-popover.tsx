@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Joyride from 'react-joyride';
 
 import Icons from '@/components/icons'; // cross used for the close button as backgroundImage and this does not work
+// eslint-disable-next-line unused-imports/no-unused-imports
 import { cn } from '@/lib/utils';
 
 type Placement =
@@ -44,7 +45,7 @@ export default function ErrPopover({ err = {} }: Props) {
   //  console.log(err);
 
   // func accept array of steps {object of  string values} and a boolean value to run the tour
-  const [state, setState] = useState<State>({
+  const [state] = useState<State>({
     run: true,
     steps: [
       {
@@ -87,7 +88,7 @@ export default function ErrPopover({ err = {} }: Props) {
               {String((err as any).downloadError.config.params.filename)}
             </p>
             <progress
-              className="progress progress-error w-168 left-0 object-left"
+              className="w-168 progress progress-error left-0 object-left"
               value="100"
               max="100"
             ></progress>
