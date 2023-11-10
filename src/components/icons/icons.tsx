@@ -193,13 +193,13 @@ const Icons = {
       preserveAspectRatio="xMidYMid"
       viewBox="0 0 96 96"
       xmlns="http://www.w3.org/2000/svg"
+      {...pops}
     >
       <path
         d="m30 30 36 36m-36 0 36-36m-18-30c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"
         fill="#EF4545"
         stroke="#fff"
         stroke-width="8px"
-        {...pops}
       />
     </svg>
   ),

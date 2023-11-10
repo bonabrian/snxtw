@@ -35,7 +35,7 @@ export default function RootLayout({
           <Header />
           <main className={cn('relative z-10')}>{children}</main>
           <Footer />
-          <Analytics />
+          <Analytics /> {/* error boundary */}
         </ThemeProvider>
       </body>
     </html>

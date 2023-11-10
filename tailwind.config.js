@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -87,9 +87,9 @@ module.exports = {
           accent: '#3b238c',
           neutral: '#202428',
           'base-100': '#fafafa',
-          info: '#2ab0e5',
-          success: '#11554a',
           warning: '#f0cb28',
+          success: '#00BE64',
+          info: '#0052B4',
           error: '#EF4545',
         },
       },
@@ -97,4 +97,4 @@ module.exports = {
   },
 
   plugins: [require('tailwindcss-animate'), require('daisyui')],
-}
+};

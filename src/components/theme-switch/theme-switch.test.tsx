@@ -1,6 +1,6 @@
-import { render } from '@testing-library/react'
+import { render } from '@testing-library/react';
 
-import ThemeSwitch from './theme-switch'
+import ThemeSwitch from './theme-switch';
 
 jest.mock('../../hooks/use-theme', () => {
   return {
@@ -9,13 +9,13 @@ jest.mock('../../hooks/use-theme', () => {
       mounted: true,
       setTheme: jest.fn(),
     }),
-  }
-})
+  };
+});
 
 describe('ThemeSwitch', () => {
   it('should renders without crashing', () => {
     expect(() => {
-      render(<ThemeSwitch />)
-    }).not.toThrow()
-  })
-})
+      render(<ThemeSwitch />);
+    }).not.toThrow();
+  });
+});

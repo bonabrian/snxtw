@@ -1,4 +1,8 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
-
-npx lint-staged --concurrent false
+if command -v pnpm &> /dev/null
+then
+    pnpm dlx lint-staged --concurrent false
+else
+    npx lint-staged --concurrent false
+fi

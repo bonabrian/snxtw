@@ -1,2 +1,2 @@
-export * from './sidebar-provider'
-export { ThemeProvider } from './theme-provider'
+export * from './sidebar-provider';
+export { ThemeProvider } from './theme-provider';

@@ -1,4 +1,5 @@
 {
+  "editorconfig": true,
   "tabWidth": 2,
   "quoteProps": "as-needed",
   "trailingComma": "all",

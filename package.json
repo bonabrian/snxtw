@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "format": "prettier \"**/*.{js,jsx,json,yml,yaml,css,less,scss,ts,tsx,md}\" --write",
     "start": "next start",
     "lint": "next lint",
     "check-types": "tsc --noEmit --pretty",
@@ -29,9 +30,8 @@
     "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-floater": "^0.9.0",
+    "react-floater": "link:react-floater",
     "react-hook-form": "^7.47.0",
-    "react-joyride": "^2.6.2",
     "react-wrap-balancer": "^1.1.0",
     "tailwindcss-animate": "^1.0.7",
     "ts-deepmerge": "^6.2.0",
@@ -40,6 +40,7 @@
   "devDependencies": {
     "@commitlint/cli": "^18.0.0",
     "@commitlint/config-conventional": "^18.0.0",
+    "@commitlint/types": "^18.4.0",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.6",

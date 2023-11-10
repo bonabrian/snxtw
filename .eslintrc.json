@@ -12,7 +12,8 @@
         "endOfLine": "auto",
         "semi": true
       }
-    ]
+    ],
+    "max-len": "off" // Add this line
   },
   "ignorePatterns": ["next-env.d.ts"],
   "overrides": [

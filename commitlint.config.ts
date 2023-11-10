@@ -1,4 +1,4 @@
-import type { UserConfig } from '@commitlint/types'
+import type { UserConfig } from '@commitlint/types';
 
 /**
  * build: changes that affect the build system or external dependencies
@@ -15,6 +15,6 @@ import type { UserConfig } from '@commitlint/types'
  */
 export const Configuration: UserConfig = {
   extends: ['@commitlint/config-conventional'],
-}
+};
 
-module.exports = Configuration
+module.exports = Configuration;
