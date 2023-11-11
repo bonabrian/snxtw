@@ -1,9 +1,9 @@
-import Link from 'next/link'
-import Balancer from 'react-wrap-balancer'
+import Link from 'next/link';
+import Balancer from 'react-wrap-balancer';
 
-import Icons from '@/components/icons'
-import { buttonVariants } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
+import Icons from '@/components/icons';
+import { buttonVariants } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
 const stack = [
   {
@@ -30,7 +30,7 @@ const stack = [
     icon: Icons.vercel,
     className: 'hover:text-foreground',
   },
-]
+];
 
 const Hero = async () => {
   const { stargazers_count: stars } = await fetch(
@@ -40,7 +40,7 @@ const Hero = async () => {
     },
   )
     .then((res) => res.json())
-    .catch((e) => console.error(e))
+    .catch((e) => console.error(e));
 
   return (
     <div className={cn('container')}>
@@ -117,7 +117,7 @@ const Hero = async () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

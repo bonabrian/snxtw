@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -78,5 +78,23 @@ module.exports = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
-}
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          primary: '#9fb2e0',
+          secondary: '#f490f9',
+          accent: '#3b238c',
+          neutral: '#202428',
+          'base-100': '#fafafa',
+          warning: '#f0cb28',
+          success: '#00BE64',
+          info: '#0052B4',
+          error: '#EF4545',
+        },
+      },
+    ],
+  },
+
+  plugins: [require('tailwindcss-animate'), require('daisyui')],
+};

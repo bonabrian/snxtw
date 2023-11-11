@@ -1,19 +1,19 @@
-'use client'
+'use client';
 
-import { useTheme } from '@/hooks'
-import { cn } from '@/lib/utils'
+import { useTheme } from '@/hooks';
+import { cn } from '@/lib/utils';
 
-import Icons from '../icons'
-import { Button } from '../ui/button'
+import Icons from '../icons';
+import { Button } from '../ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '../ui/dropdown-menu'
+} from '../ui/dropdown-menu';
 
 const ThemeSwitch = () => {
-  const { setTheme } = useTheme()
+  const { setTheme } = useTheme();
 
   return (
     <DropdownMenu>
@@ -47,7 +47,7 @@ const ThemeSwitch = () => {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
-}
+  );
+};
 
-export default ThemeSwitch
+export default ThemeSwitch;

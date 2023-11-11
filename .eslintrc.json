@@ -10,9 +10,10 @@
       {
         "singleQuote": true,
         "endOfLine": "auto",
-        "semi": false
+        "semi": true
       }
-    ]
+    ],
+    "max-len": "off" // Add this line
   },
   "ignorePatterns": ["next-env.d.ts"],
   "overrides": [
@@ -39,7 +40,7 @@
           {
             "singleQuote": true,
             "endOfLine": "auto",
-            "semi": false
+            "semi": true
           }
         ],
         "@typescript-eslint/comma-dangle": "off", // Avoid conflict rule between Eslint and Prettier

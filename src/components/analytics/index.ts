@@ -1,3 +1,4 @@
-import Analytics from './analytics'
+import Analytics from './analytics';
+// used for errorBoundary
 
-export default Analytics
+export default Analytics;

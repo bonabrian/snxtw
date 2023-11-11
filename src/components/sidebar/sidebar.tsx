@@ -1,17 +1,17 @@
-'use client'
+'use client';
 
-import Link from 'next/link'
-import { useRef } from 'react'
+import Link from 'next/link';
+import { useRef } from 'react';
 
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/utils';
 
-import { useSidebar } from '../providers'
-import { Button } from '../ui/button'
+import { useSidebar } from '../providers';
+import { Button } from '../ui/button';
 
 interface NavItem {
-  label: string
-  path: string
-  icon?: JSX.Element
+  label: string;
+  path: string;
+  icon?: JSX.Element;
 }
 
 const navItems: NavItem[] = [
@@ -25,11 +25,11 @@ const navItems: NavItem[] = [
     path: '/components',
     // icon: <PuzzlePiece className={cn('h-6 w-6')} />,
   },
-]
+];
 
 const Sidebar = () => {
-  const { collapsed, setCollapsed, show, setShow } = useSidebar()
-  const sidebarRef = useRef(null)
+  const { collapsed, setCollapsed, show, setShow } = useSidebar();
+  const sidebarRef = useRef(null);
 
   return (
     <>
@@ -97,7 +97,7 @@ const Sidebar = () => {
         </div>
       </aside>
     </>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

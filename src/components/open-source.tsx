@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import Balancer from 'react-wrap-balancer'
+import Link from 'next/link';
+import Balancer from 'react-wrap-balancer';
 
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/utils';
 
 const OpenSource = () => {
   return (
@@ -45,7 +45,7 @@ const OpenSource = () => {
         </p>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default OpenSource
+export default OpenSource;

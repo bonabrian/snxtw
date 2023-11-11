@@ -1,4 +1,4 @@
-import type { LucideIcon, LucideProps } from 'lucide-react'
+import type { LucideIcon, LucideProps } from 'lucide-react';
 import {
   AlertTriangle,
   ArrowRight,
@@ -24,9 +24,9 @@ import {
   Twitter,
   User,
   X,
-} from 'lucide-react'
+} from 'lucide-react';
 
-export type Icon = LucideIcon
+export type Icon = LucideIcon;
 
 const Icons = {
   logo: Command,
@@ -184,8 +184,27 @@ const Icons = {
       <path d="M21.8068 18.2848L13.5528.7565c-.207-.4382-.639-.7273-1.1286-.7541-.5023-.0293-.9523.213-1.2062.6253L2.266 15.1271c-.2773.4518-.2718 1.0091.0158 1.4555l4.3759 6.7786c.2608.4046.7127.6388 1.1823.6388.1332 0 .267-.0188.3987-.0577l12.7019-3.7568c.3891-.1151.7072-.3904.8737-.7553s.1633-.7828-.0075-1.1454zm-1.8481.7519L9.1814 22.2242c-.3292.0975-.6448-.1873-.5756-.5194l3.8501-18.4386c.072-.3448.5486-.3996.699-.0803l7.1288 15.138c.1344.2856-.019.6224-.325.7128z" />
     </svg>
   ),
+  cross: ({ ...pops }: LucideProps) => (
+    <svg
+      role="img"
+      width="24px"
+      height="24px"
+      aria-hidden="true"
+      preserveAspectRatio="xMidYMid"
+      viewBox="0 0 96 96"
+      xmlns="http://www.w3.org/2000/svg"
+      {...pops}
+    >
+      <path
+        d="m30 30 36 36m-36 0 36-36m-18-30c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"
+        fill="#EF4545"
+        stroke="#fff"
+        stroke-width="8px"
+      />
+    </svg>
+  ),
   twitter: Twitter,
   check: Check,
-}
+};
 
-export default Icons
+export default Icons;

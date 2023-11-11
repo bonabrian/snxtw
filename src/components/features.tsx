@@ -1,8 +1,8 @@
-import Balancer from 'react-wrap-balancer'
+import Balancer from 'react-wrap-balancer';
 
-import Icons from '@/components/icons'
-import { Card } from '@/components/ui/card'
-import { cn } from '@/lib/utils'
+import Icons from '@/components/icons';
+import { Card } from '@/components/ui/card';
+import { cn } from '@/lib/utils';
 
 const features = [
   {
@@ -37,7 +37,7 @@ const features = [
       'Delightful JavaScript Testing Framework with a focus on simplicity.',
     icon: Icons.jest,
   },
-]
+];
 
 const Features = () => {
   return (
@@ -101,7 +101,7 @@ const Features = () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Features
+export default Features;
