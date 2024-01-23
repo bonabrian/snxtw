@@ -143,9 +143,9 @@ const Icons = {
         y2="208"
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="16"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="16"
       ></line>
       <line
         x1="192"
@@ -154,9 +154,9 @@ const Icons = {
         y2="192"
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="16"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="16"
       ></line>
     </svg>
   ),
